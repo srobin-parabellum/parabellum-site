@@ -29,7 +29,7 @@ export default function ParabellumLandingPage() {
       `Facility: ${form.facility}\n` +
         `Contact: ${form.contact}\n` +
         `Email: ${form.email}\n` +
-        `Current cost per case: $${form.costPerCase}\n` +
+        `Cost per case: $${form.costPerCase}\n` +
         `Cases per month: ${form.casesPerMonth}\n` +
         `Estimated annual spend: $${annualSpend.toLocaleString()}\n` +
         `Notes: ${form.notes}`
@@ -204,7 +204,7 @@ export default function ParabellumLandingPage() {
 
                 <div className="rounded-2xl bg-slate-50 p-4">
                   <div className="text-sm text-slate-500">
-                    Estimated annual current spend
+                    Estimated annual spend
                   </div>
                   <div className="mt-1 text-3xl font-semibold">
                     ${annualSpend.toLocaleString()}
