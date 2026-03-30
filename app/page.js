@@ -66,7 +66,7 @@ export default function ParabellumLandingPage() {
                 ASC-focused orthopedic solutions
               </div>
 
-              <h1 className="max-w-2xl font-[family-name:var(--font-science-gothic)] text-4xl font-semibold tracking-tight sm:text-5xl">
+              <h1 className="max-w-2xl font-[family-name:var(--font-science-gothic)] text-4xl font-semibold tracking-tight text-[#121F37] sm:text-5xl">
                 High-quality orthopedic products built for the ASC model.
               </h1>
 
@@ -78,7 +78,7 @@ export default function ParabellumLandingPage() {
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-slate-200 p-5 shadow-sm">
-                  <h3 className="font-[family-name:var(--font-science-gothic)] text-sm font-semibold uppercase tracking-wide text-slate-500">
+                  <h3 className="font-[family-name:var(--font-science-gothic)] text-sm font-semibold uppercase tracking-wide text-[#121F37]/70">
                     What we are about
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-slate-700">
@@ -89,9 +89,9 @@ export default function ParabellumLandingPage() {
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 p-5 shadow-sm">
-                  <h3 className="font-[family-name:var(--font-science-gothic)] text-sm font-semibold uppercase tracking-wide text-slate-500">
+                  <h3 className="font-[family-name:var(--font-science-gothic)] text-sm font-semibold uppercase tracking-wide text-[#121F37]/70">
                     Why ASCs care
-                  </h3>
+                    </h3>
                   <p className="mt-2 text-sm leading-6 text-slate-700">
                     Lower case cost, predictable support, and products designed
                     to help centers protect margin while still delivering
@@ -103,7 +103,7 @@ export default function ParabellumLandingPage() {
 
             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl">
               <div className="mb-4">
-                <h2 className="font-[family-name:var(--font-science-gothic)] text-2xl font-semibold">
+                <h2 className="font-[family-name:var(--font-science-gothic)] text-2xl font-semibold text-[#121F37]">
                   ASC Cost Snapshot
                 </h2>
                 <p className="mt-2 text-sm text-slate-600">
@@ -213,7 +213,7 @@ export default function ParabellumLandingPage() {
 
                 <button
                   type="submit"
-                  className="w-full rounded-2xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
+                  className="w-full rounded-2xl bg-[#121F37] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
                 >
                   Submit for review
                 </button>
@@ -226,7 +226,7 @@ export default function ParabellumLandingPage() {
       <section className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
         <div className="grid gap-6 md:grid-cols-3">
           <div className="rounded-3xl border border-slate-200 p-6 shadow-sm">
-            <h3 className="font-[family-name:var(--font-science-gothic)] text-lg font-semibold">
+            <h3 className="font-[family-name:var(--font-science-gothic)] text-lg font-semibold text-[#121F37]">
               ASC-first economics
             </h3>
             <p className="mt-3 text-sm leading-6 text-slate-600">
@@ -236,7 +236,7 @@ export default function ParabellumLandingPage() {
           </div>
 
           <div className="rounded-3xl border border-slate-200 p-6 shadow-sm">
-            <h3 className="font-[family-name:var(--font-science-gothic)] text-lg font-semibold">
+            <h3 className="font-[family-name:var(--font-science-gothic)] text-lg font-semibold text-[#121F37]">
               Quality without excess
             </h3>
             <p className="mt-3 text-sm leading-6 text-slate-600">
@@ -246,7 +246,7 @@ export default function ParabellumLandingPage() {
           </div>
 
           <div className="rounded-3xl border border-slate-200 p-6 shadow-sm">
-            <h3 className="font-[family-name:var(--font-science-gothic)] text-lg font-semibold">
+            <h3 className="font-[family-name:var(--font-science-gothic)] text-lg font-semibold text-[#121F37]">
               Direct follow-up
             </h3>
             <p className="mt-3 text-sm leading-6 text-slate-600">
