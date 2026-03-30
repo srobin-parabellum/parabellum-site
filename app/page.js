@@ -45,23 +45,33 @@ export default function ParabellumLandingPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
 
-              {/* 🔥 LOGO ROW (NEW) */}
+              {/* 🔥 LOGO + TEXT (UPDATED) */}
               <div className="mb-6 flex items-center gap-4">
                 <Image
                   src="/logo-icon.png"
                   alt="Parabellum Logo"
-                  width={70}
-                  height={70}
+                  width={55}
+                  height={55}
                   priority
                 />
 
-                <Image
-                  src="/logo-text.png"
-                  alt="Parabellum Med Tech"
-                  width={264}
-                  height={66}
-                  priority
-                />
+                <div className="leading-none">
+                  {/* PARABELLUM */}
+                  <div className="text-[28px] font-light tracking-[0.22em] text-[#1B2340] sm:text-[36px] sm:tracking-[0.28em] lg:text-[42px] lg:tracking-[0.32em]">
+                    PARABELLUM
+                  </div>
+
+                  {/* MED TECH LLC + LINES */}
+                  <div className="mt-3 flex items-center gap-3 sm:gap-4">
+                    <div className="h-[2px] w-10 bg-[#A32722] sm:w-14 lg:w-16" />
+
+                    <div className="text-[13px] font-light tracking-[0.3em] text-[#1B2340] sm:text-[16px] sm:tracking-[0.38em] lg:text-[20px] lg:tracking-[0.48em]">
+                      MED TECH LLC
+                    </div>
+
+                    <div className="h-[2px] w-10 bg-[#A32722] sm:w-14 lg:w-16" />
+                  </div>
+                </div>
               </div>
 
               <div className="mb-4 inline-flex rounded-full border border-slate-200 px-4 py-1 text-sm font-medium text-slate-600">
