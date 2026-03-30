@@ -1,10 +1,16 @@
-import { Inter } from "next/font/google";
+import { Inter, Science_Gothic } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-inter",
+});
+
+const scienceGothic = Science_Gothic({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-science-gothic",
 });
 
 export const metadata = {
@@ -20,7 +26,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${scienceGothic.variable} h-full antialiased`}
+    >
       <body className={`${inter.className} min-h-full flex flex-col`}>
         {children}
       </body>

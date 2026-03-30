@@ -1,4 +1,3 @@
-
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -45,8 +44,6 @@ export default function ParabellumLandingPage() {
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
-
-              {/* 🔥 LOGO ROW (NEW) */}
               <div className="mb-6 flex items-center gap-4">
                 <Image
                   src="/logo-icon.png"
@@ -69,7 +66,7 @@ export default function ParabellumLandingPage() {
                 ASC-focused orthopedic solutions
               </div>
 
-              <h1 className="max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
+              <h1 className="max-w-2xl font-[family-name:var(--font-science-gothic)] text-4xl font-semibold tracking-tight sm:text-5xl">
                 High-quality orthopedic products built for the ASC model.
               </h1>
 
@@ -81,7 +78,7 @@ export default function ParabellumLandingPage() {
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-slate-200 p-5 shadow-sm">
-                  <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+                  <h3 className="font-[family-name:var(--font-science-gothic)] text-sm font-semibold uppercase tracking-wide text-slate-500">
                     What we are about
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-slate-700">
@@ -92,7 +89,7 @@ export default function ParabellumLandingPage() {
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 p-5 shadow-sm">
-                  <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+                  <h3 className="font-[family-name:var(--font-science-gothic)] text-sm font-semibold uppercase tracking-wide text-slate-500">
                     Why ASCs care
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-slate-700">
@@ -106,7 +103,9 @@ export default function ParabellumLandingPage() {
 
             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl">
               <div className="mb-4">
-                <h2 className="text-2xl font-semibold">ASC Cost Snapshot</h2>
+                <h2 className="font-[family-name:var(--font-science-gothic)] text-2xl font-semibold">
+                  ASC Cost Snapshot
+                </h2>
                 <p className="mt-2 text-sm text-slate-600">
                   Fill this out and Parabellum can review your estimated annual
                   spend and follow up directly.
@@ -227,7 +226,9 @@ export default function ParabellumLandingPage() {
       <section className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
         <div className="grid gap-6 md:grid-cols-3">
           <div className="rounded-3xl border border-slate-200 p-6 shadow-sm">
-            <h3 className="text-lg font-semibold">ASC-first economics</h3>
+            <h3 className="font-[family-name:var(--font-science-gothic)] text-lg font-semibold">
+              ASC-first economics
+            </h3>
             <p className="mt-3 text-sm leading-6 text-slate-600">
               We are built around helping surgery centers evaluate implant costs
               at the case level and find a more efficient path forward.
@@ -235,7 +236,9 @@ export default function ParabellumLandingPage() {
           </div>
 
           <div className="rounded-3xl border border-slate-200 p-6 shadow-sm">
-            <h3 className="text-lg font-semibold">Quality without excess</h3>
+            <h3 className="font-[family-name:var(--font-science-gothic)] text-lg font-semibold">
+              Quality without excess
+            </h3>
             <p className="mt-3 text-sm leading-6 text-slate-600">
               Thoughtful product strategy, dependable supply, and surgeon-ready
               systems designed to support growth.
@@ -243,7 +246,9 @@ export default function ParabellumLandingPage() {
           </div>
 
           <div className="rounded-3xl border border-slate-200 p-6 shadow-sm">
-            <h3 className="text-lg font-semibold">Direct follow-up</h3>
+            <h3 className="font-[family-name:var(--font-science-gothic)] text-lg font-semibold">
+              Direct follow-up
+            </h3>
             <p className="mt-3 text-sm leading-6 text-slate-600">
               Every inquiry comes straight to your team so you can personally
               review opportunities and respond with projected savings.
