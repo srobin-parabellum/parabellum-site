@@ -159,7 +159,7 @@ export default function ParabellumLandingPage() {
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <label className="mb-1 block text-sm font-medium">
-                      Current cost of goods per case ($)
+                      Cost of goods per case ($)
                     </label>
                     <input
                       type="number"
