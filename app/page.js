@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 export default function ParabellumLandingPage() {
   const [form, setForm] = React.useState({
@@ -43,6 +44,26 @@ export default function ParabellumLandingPage() {
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
+
+              {/* 🔥 LOGO ROW (NEW) */}
+              <div className="mb-6 flex items-center gap-4">
+                <Image
+                  src="/logo-icon.png"
+                  alt="Parabellum Logo"
+                  width={55}
+                  height={55}
+                  priority
+                />
+
+                <Image
+                  src="/logo-text.png"
+                  alt="Parabellum Med Tech"
+                  width={220}
+                  height={55}
+                  priority
+                />
+              </div>
+
               <div className="mb-4 inline-flex rounded-full border border-slate-200 px-4 py-1 text-sm font-medium text-slate-600">
                 ASC-focused orthopedic solutions
               </div>
