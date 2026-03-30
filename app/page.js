@@ -50,8 +50,8 @@ export default function ParabellumLandingPage() {
                 <Image
                   src="/logo-icon.png"
                   alt="Parabellum Logo"
-                  width={100}
-                  height={100}
+                  width={75}
+                  height={75}
                   priority
                 />
 
