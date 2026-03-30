@@ -19,9 +19,13 @@ export const metadata = {
     template: "%s | Parabellum Med Tech",
   },
   description: "ASC-focused orthopedic solutions",
-  icons: {
-    icon: "/icon.png",
-  },
+icons: {
+  icon: [
+    { url: "/icon.png", sizes: "32x32", type: "image/png" },
+  ],
+  shortcut: "/icon.png",
+  apple: "/icon.png",
+},
 };
 
 export default function RootLayout({ children }) {
