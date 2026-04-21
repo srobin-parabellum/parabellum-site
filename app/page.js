@@ -36,14 +36,12 @@ export default function ParabellumLandingPage() {
   const annualSpend =
     rcrAnnualSpend + distalRadiusAnnualSpend + distalFibulaAnnualSpend;
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const subject = encodeURIComponent("Parabellum ASC Savings Inquiry");
