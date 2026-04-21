@@ -7,31 +7,63 @@ export default function ParabellumLandingPage() {
     facility: "",
     contact: "",
     email: "",
-    costPerCase: "",
-    casesPerMonth: "",
+
+    rcrCostPerCase: "",
+    rcrCasesPerMonth: "",
+
+    distalRadiusCostPerCase: "",
+    distalRadiusCasesPerMonth: "",
+
+    distalFibulaCostPerCase: "",
+    distalFibulaCasesPerMonth: "",
+
     notes: "",
   });
 
-  const cost = Number(form.costPerCase) || 0;
-  const monthlyCases = Number(form.casesPerMonth) || 0;
-  const annualSpend = cost * monthlyCases * 12;
+  const rcrAnnualSpend =
+    (Number(form.rcrCostPerCase) || 0) * (Number(form.rcrCasesPerMonth) || 0) * 12;
 
-  const handleChange = (e) => {
+  const distalRadiusAnnualSpend =
+    (Number(form.distalRadiusCostPerCase) || 0) *
+    (Number(form.distalRadiusCasesPerMonth) || 0) *
+    12;
+
+  const distalFibulaAnnualSpend =
+    (Number(form.distalFibulaCostPerCase) || 0) *
+    (Number(form.distalFibulaCasesPerMonth) || 0) *
+    12;
+
+  const annualSpend =
+    rcrAnnualSpend + distalRadiusAnnualSpend + distalFibulaAnnualSpend;
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const subject = encodeURIComponent("Parabellum ASC Savings Inquiry");
     const body = encodeURIComponent(
       `Facility: ${form.facility}\n` +
         `Contact: ${form.contact}\n` +
-        `Email: ${form.email}\n` +
-        `Cost per case: $${form.costPerCase}\n` +
-        `Cases per month: ${form.casesPerMonth}\n` +
-        `Estimated annual spend: $${annualSpend.toLocaleString()}\n` +
+        `Email: ${form.email}\n\n` +
+        `Rotator Cuff Repair (RCR)\n` +
+        `Cost per case: $${form.rcrCostPerCase}\n` +
+        `Cases per month: ${form.rcrCasesPerMonth}\n` +
+        `Annual subtotal: $${rcrAnnualSpend.toLocaleString()}\n\n` +
+        `Distal Radius\n` +
+        `Cost per case: $${form.distalRadiusCostPerCase}\n` +
+        `Cases per month: ${form.distalRadiusCasesPerMonth}\n` +
+        `Annual subtotal: $${distalRadiusAnnualSpend.toLocaleString()}\n\n` +
+        `Distal Fibula\n` +
+        `Cost per case: $${form.distalFibulaCostPerCase}\n` +
+        `Cases per month: ${form.distalFibulaCasesPerMonth}\n` +
+        `Annual subtotal: $${distalFibulaAnnualSpend.toLocaleString()}\n\n` +
+        `Estimated annual spend: $${annualSpend.toLocaleString()}\n\n` +
         `Notes: ${form.notes}`
     );
 
@@ -116,7 +148,7 @@ export default function ParabellumLandingPage() {
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <label className="mb-1 block text-sm font-medium text-[#121F37]">
@@ -162,37 +194,138 @@ export default function ParabellumLandingPage() {
                   />
                 </div>
 
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <label className="mb-1 block text-sm font-medium text-[#121F37]">
-                      Cost of goods per case ($)
-                    </label>
-                    <input
-                      type="number"
-                      name="costPerCase"
-                      value={form.costPerCase}
-                      onChange={handleChange}
-                      className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#921F15]/40 focus:ring-2 focus:ring-[#921F15]/20"
-                      placeholder="1500"
-                      min="0"
-                      required
-                    />
+                <div className="rounded-2xl border border-slate-200 p-4">
+                  <div className="mb-3 font-[family-name:var(--font-science-gothic)] text-sm font-semibold uppercase tracking-wide text-[#121F37]">
+                    Rotator Cuff Repair (RCR)
                   </div>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <label className="mb-1 block text-sm font-medium text-[#121F37]">
+                        Cost of goods per case ($)
+                      </label>
+                      <input
+                        type="number"
+                        name="rcrCostPerCase"
+                        value={form.rcrCostPerCase}
+                        onChange={handleChange}
+                        className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#921F15]/40 focus:ring-2 focus:ring-[#921F15]/20"
+                        placeholder="1500"
+                        min="0"
+                        required
+                      />
+                    </div>
 
-                  <div>
-                    <label className="mb-1 block text-sm font-medium text-[#121F37]">
-                      Cases per month
-                    </label>
-                    <input
-                      type="number"
-                      name="casesPerMonth"
-                      value={form.casesPerMonth}
-                      onChange={handleChange}
-                      className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#921F15]/40 focus:ring-2 focus:ring-[#921F15]/20"
-                      placeholder="25"
-                      min="0"
-                      required
-                    />
+                    <div>
+                      <label className="mb-1 block text-sm font-medium text-[#121F37]">
+                        Cases per month
+                      </label>
+                      <input
+                        type="number"
+                        name="rcrCasesPerMonth"
+                        value={form.rcrCasesPerMonth}
+                        onChange={handleChange}
+                        className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#921F15]/40 focus:ring-2 focus:ring-[#921F15]/20"
+                        placeholder="25"
+                        min="0"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-3 rounded-xl bg-slate-50 px-4 py-3 text-sm text-slate-600">
+                    Annual subtotal:{" "}
+                    <span className="font-semibold text-[#121F37]">
+                      ${rcrAnnualSpend.toLocaleString()}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 p-4">
+                  <div className="mb-3 font-[family-name:var(--font-science-gothic)] text-sm font-semibold uppercase tracking-wide text-[#121F37]">
+                    Distal Radius
+                  </div>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <label className="mb-1 block text-sm font-medium text-[#121F37]">
+                        Cost of goods per case ($)
+                      </label>
+                      <input
+                        type="number"
+                        name="distalRadiusCostPerCase"
+                        value={form.distalRadiusCostPerCase}
+                        onChange={handleChange}
+                        className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#921F15]/40 focus:ring-2 focus:ring-[#921F15]/20"
+                        placeholder="1500"
+                        min="0"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label className="mb-1 block text-sm font-medium text-[#121F37]">
+                        Cases per month
+                      </label>
+                      <input
+                        type="number"
+                        name="distalRadiusCasesPerMonth"
+                        value={form.distalRadiusCasesPerMonth}
+                        onChange={handleChange}
+                        className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#921F15]/40 focus:ring-2 focus:ring-[#921F15]/20"
+                        placeholder="25"
+                        min="0"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-3 rounded-xl bg-slate-50 px-4 py-3 text-sm text-slate-600">
+                    Annual subtotal:{" "}
+                    <span className="font-semibold text-[#121F37]">
+                      ${distalRadiusAnnualSpend.toLocaleString()}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 p-4">
+                  <div className="mb-3 font-[family-name:var(--font-science-gothic)] text-sm font-semibold uppercase tracking-wide text-[#121F37]">
+                    Distal Fibula
+                  </div>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <label className="mb-1 block text-sm font-medium text-[#121F37]">
+                        Cost of goods per case ($)
+                      </label>
+                      <input
+                        type="number"
+                        name="distalFibulaCostPerCase"
+                        value={form.distalFibulaCostPerCase}
+                        onChange={handleChange}
+                        className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#921F15]/40 focus:ring-2 focus:ring-[#921F15]/20"
+                        placeholder="1500"
+                        min="0"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label className="mb-1 block text-sm font-medium text-[#121F37]">
+                        Cases per month
+                      </label>
+                      <input
+                        type="number"
+                        name="distalFibulaCasesPerMonth"
+                        value={form.distalFibulaCasesPerMonth}
+                        onChange={handleChange}
+                        className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#921F15]/40 focus:ring-2 focus:ring-[#921F15]/20"
+                        placeholder="25"
+                        min="0"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-3 rounded-xl bg-slate-50 px-4 py-3 text-sm text-slate-600">
+                    Annual subtotal:{" "}
+                    <span className="font-semibold text-[#121F37]">
+                      ${distalFibulaAnnualSpend.toLocaleString()}
+                    </span>
                   </div>
                 </div>
 
