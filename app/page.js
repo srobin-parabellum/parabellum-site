@@ -72,7 +72,7 @@ export default function ParabellumLandingPage() {
     <div className="min-h-screen bg-white text-slate-900">
       <section className="border-b border-slate-200 bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
             <div>
               <div className="mb-6 flex items-center gap-4">
                 <Image
@@ -129,6 +129,43 @@ export default function ParabellumLandingPage() {
                     Lower case cost, predictable support, and products designed
                     to help centers protect margin while still delivering
                     excellent patient care.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                  <div className="mb-3 h-1 w-12 rounded-full bg-[#921F15]" />
+                  <h3 className="font-[family-name:var(--font-science-gothic)] text-sm font-semibold uppercase tracking-wide text-[#121F37]/75">
+                    ASC-first economics
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-700">
+                    We are built around helping surgery centers evaluate implant
+                    costs at the case level and find a more efficient path
+                    forward.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                  <div className="mb-3 h-1 w-12 rounded-full bg-[#921F15]" />
+                  <h3 className="font-[family-name:var(--font-science-gothic)] text-sm font-semibold uppercase tracking-wide text-[#121F37]/75">
+                    Quality without excess
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-700">
+                    Thoughtful product strategy, dependable supply, and
+                    surgeon-ready systems designed to support growth.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-4 flex justify-center sm:mt-6">
+                <div className="w-full max-w-sm rounded-2xl border border-slate-200 p-5 text-center shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                  <div className="mx-auto mb-3 h-1 w-12 rounded-full bg-[#921F15]" />
+                  <h3 className="font-[family-name:var(--font-science-gothic)] text-sm font-semibold uppercase tracking-wide text-[#121F37]/75">
+                    Direct follow-up
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-700">
+                    Every inquiry comes straight to your team so you can
+                    personally review opportunities and respond with projected
+                    savings.
                   </p>
                 </div>
               </div>
@@ -358,43 +395,6 @@ export default function ParabellumLandingPage() {
                 </button>
               </form>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
-        <div className="grid gap-6 md:grid-cols-3">
-          <div className="rounded-3xl border border-slate-200 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-            <div className="mb-3 h-1 w-12 rounded-full bg-[#921F15]" />
-            <h3 className="font-[family-name:var(--font-science-gothic)] text-lg font-semibold text-[#121F37]">
-              ASC-first economics
-            </h3>
-            <p className="mt-3 text-sm leading-6 text-slate-600">
-              We are built around helping surgery centers evaluate implant costs
-              at the case level and find a more efficient path forward.
-            </p>
-          </div>
-
-          <div className="rounded-3xl border border-slate-200 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-            <div className="mb-3 h-1 w-12 rounded-full bg-[#921F15]" />
-            <h3 className="font-[family-name:var(--font-science-gothic)] text-lg font-semibold text-[#121F37]">
-              Quality without excess
-            </h3>
-            <p className="mt-3 text-sm leading-6 text-slate-600">
-              Thoughtful product strategy, dependable supply, and surgeon-ready
-              systems designed to support growth.
-            </p>
-          </div>
-
-          <div className="rounded-3xl border border-slate-200 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-            <div className="mb-3 h-1 w-12 rounded-full bg-[#921F15]" />
-            <h3 className="font-[family-name:var(--font-science-gothic)] text-lg font-semibold text-[#121F37]">
-              Direct follow-up
-            </h3>
-            <p className="mt-3 text-sm leading-6 text-slate-600">
-              Every inquiry comes straight to your team so you can personally
-              review opportunities and respond with projected savings.
-            </p>
           </div>
         </div>
       </section>
