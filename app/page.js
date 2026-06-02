@@ -88,6 +88,7 @@ export default function ParabellumLandingPage() {
                   width={264}
                   height={66}
                   priority
+                  style={{ objectFit: "contain", background: "transparent" }}
                 />
               </div>
 
